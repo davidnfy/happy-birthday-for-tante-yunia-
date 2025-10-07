@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(to bottom right, #d8bca6, #6b1d1d);
+  overflow: hidden;
+  position: relative;
+  color: #fffaf2;
+  text-align: center;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  padding: 50px 25px;
+  max-width: 700px;
+  margin: 100px auto;
+  background: rgba(107, 29, 29, 0.7);
+  border-radius: 25px;
+  box-shadow: 0 0 20px rgba(107, 29, 29, 0.5);
+  animation: fadeIn 2s ease-in-out;
+}
+
+h1 {
+  font-size: 2.6rem;
+  color: #fff0e6;
+  margin-bottom: 20px;
+}
+
+.message {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #fbeee0;
+}
+
+.signature {
+  margin-top: 25px;
+  font-style: italic;
+  color: #ffdfd3;
+}
+
+#music-btn {
+  margin-top: 20px;
+  background-color: #d8bca6;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #6b1d1d;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#music-btn:hover {
+  background-color: #cfa98b;
+  transform: scale(1.05);
+}
+
+.love-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.love {
+  position: absolute;
+  color: #ffb6b6;
+  font-size: 20px;
+  opacity: 0.8;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
