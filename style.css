@@ -74,11 +74,13 @@ h1 {
 
 .love {
   position: absolute;
+  top: -10px;
   color: #ffb6b6;
-  font-size: 20px;
-  opacity: 0.8;
+  pointer-events: none;
   animation: fall linear forwards;
+  will-change: transform; /* bantu browser render lebih efisien */
 }
+
 
 @keyframes fall {
   0% {
@@ -95,3 +97,4 @@ h1 {
   from { opacity: 0; transform: scale(0.95); }
   to { opacity: 1; transform: scale(1); }
 }
+
