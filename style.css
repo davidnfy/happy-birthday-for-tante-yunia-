@@ -7,50 +7,54 @@
 
 body {
   height: 100vh;
+  width: 100vw;
   background: linear-gradient(to bottom right, #d8bca6, #6b1d1d);
   overflow: hidden;
   position: relative;
   color: #fffaf2;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .content {
   position: relative;
   z-index: 2;
-  padding: 50px 25px;
-  max-width: 700px;
-  margin: 100px auto;
   background: rgba(107, 29, 29, 0.7);
-  border-radius: 25px;
+  border-radius: 20px;
   box-shadow: 0 0 20px rgba(107, 29, 29, 0.5);
-  animation: fadeIn 2s ease-in-out;
+  animation: fadeIn 1.8s ease-in-out;
+  padding: 25px;
+  max-width: 90%;
 }
 
 h1 {
-  font-size: 2.6rem;
+  font-size: 1.8rem;
   color: #fff0e6;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .message {
-  font-size: 1.1rem;
-  line-height: 1.8;
+  font-size: 0.95rem;
+  line-height: 1.5;
   color: #fbeee0;
+  margin-bottom: 10px;
 }
 
 .signature {
-  margin-top: 25px;
   font-style: italic;
   color: #ffdfd3;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
 }
 
 #music-btn {
-  margin-top: 20px;
   background-color: #d8bca6;
   border: none;
-  padding: 12px 25px;
+  padding: 10px 20px;
   border-radius: 25px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   cursor: pointer;
   color: #6b1d1d;
   font-weight: bold;
@@ -76,11 +80,12 @@ h1 {
   position: absolute;
   top: -10px;
   color: #ffb6b6;
-  pointer-events: none;
+  font-size: 18px;
+  opacity: 0.8;
   animation: fall linear forwards;
-  will-change: transform; /* bantu browser render lebih efisien */
+  pointer-events: none;
+  will-change: transform;
 }
-
 
 @keyframes fall {
   0% {
@@ -98,8 +103,28 @@ h1 {
   to { opacity: 1; transform: scale(1); }
 }
 
-html, body {
-  scroll-behavior: smooth;
+/* 🌸 Responsive khusus HP */
+@media (max-width: 600px) {
+  .content {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .message {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .signature {
+    font-size: 0.8rem;
+  }
+
+  #music-btn {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+  }
 }
-
-
